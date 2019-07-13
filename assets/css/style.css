@@ -1,0 +1,13 @@
+body {
+    background-image: url(../images/starWars.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.game {
+    width: 60%;
+    margin-left: 50px;
+    margin-top: 50px;
+    color: #FCE300;
+    font-size: 30px;
+}

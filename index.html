@@ -4,13 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Star Wars Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">    
+    <link rel="stylesheet" href="assets/css/boot.css">  
 </head>
 <body>
-    <div class="container-fluid">
+    <div id="firstScreen" class="container-fluid">
+        <img class="img-fluid"/>
+        <h1>Choose Wisely</h1>
+    </div>
+    <div id="game" class="ctr container card-deck" style="opacity: 0.8;">
+    </div>
+</div>
+
+<div id="secondScreen" class="bg-trans container-fluid animated slideInDown">
+    <div class="row">
+        <div class="col-12 ctr">
+            Enemies remaining:
+            <div id="defendersLeftDiv"></div>
+        </div>
+    </div>
+    <div class="row text-center paddingTop">
+        <div class="col-5">
+            Player:
+            <div class="container" style="width: 30%;">
+                <div class="playerDiv"></div>
+                <div class="playerHealthDiv"></div>
+            </div>
+        </div>
+        <div class="col-2 paddingTop">
+        </div>
+        <div class="col-5">
+            Enemy:
+            <div class="container">
+                <div class="defenderDiv"></div>
+                <div class="defenderHealthDiv"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 btn">
+            <div id="msg"></div>
+            <button type="button" name="attack" id="attackBtn" class="btn btn-dark btn-lg">Attack!</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div id="globalMsg" class="animated fadeInUp">
+        <p class="shadow">
+            Congratulations! you saved the galaxy
+        </p>
+    </div>
+</div>
+
+    <!-- <div class="container-fluid" di="firstScreen">
         <h1> Star Wars RPG</h1>
     </div>
     <div id="characterPlaceHolder" class="card-deck">
@@ -25,19 +74,21 @@
         <div class="fight">
             <p>Fight Area</p>
             <p id="attack"></p>
-            <p id="defend"></p>
-        </div>
+            <p id="defend"></p> -->
+        <!-- </div>
         <button id="attack">Attack</button>
         <div class="defender">
             <p>Defender</p>
         </div>
-    </div>
+    </div> -->
 
 <script
 src="https://code.jquery.com/jquery-3.4.1.js"
 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="assets/javascript/game.js"></script>
-
 </body>
 </html>

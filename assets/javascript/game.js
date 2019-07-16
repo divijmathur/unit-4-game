@@ -99,7 +99,7 @@ function updatePics(fromDivID, toDivID) {
 
 // plays audio file (.mp3)
 function playAudio() {
-    var audio = new Audio("./assets/media/themeSongSmall.mp3");
+    var audio = new Audio("assets/media/theme.mp3");
     audio.play();
 }
 

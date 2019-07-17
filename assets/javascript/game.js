@@ -17,7 +17,7 @@ function Character(name, hp, ap, counter, pic) {
 }
 
 
-// Increase the attack strength (this attack strength + original attack strength)
+// Increase the attack strength (this attack strength + original attack strength)-allowing me to add new method of object
 Character.prototype.increaseAttack = function () {
     this.attackPower += baseAttack;
 };
@@ -26,7 +26,7 @@ Character.prototype.increaseAttack = function () {
 Character.prototype.attack = function (Obj) {
     Obj.healthPoints -= this.attackPower;
     $("#msg").html("You attacked " +
-        Obj.name + "for " + this.attackPower + " damage points.");
+        Obj.name + " for " + this.attackPower + " damage points.");
     this.increaseAttack();
 };
 
@@ -80,7 +80,7 @@ function characterCards(divID) {
         $(divID + " img:last-child").addClass("img-thumbnail");
         $(divID + " div:last-child").append(charArray[i].name + "<br>");
         $(divID + " div:last-child").append("HP: " + charArray[i].healthPoints);
-        $(divID + " idv:last-child").append();
+        $(divID + " div:last-child").append();
 
     }
 }
@@ -99,7 +99,7 @@ function updatePics(fromDivID, toDivID) {
 
 // plays audio file (.mp3)
 function playAudio() {
-    var audio = new Audio("assets/media/theme.mp3");
+    var audio = new Audio("./assets/media/theme.mp3");
     audio.play();
 }
 
@@ -119,7 +119,7 @@ $(document).on("click", "img", function () {
                 defender = charArray[j]; // sets defender
                 charArray.splice(j, 1);
                 defenderSelected = true;
-                $("#msg").html("Click the button to attack!");
+                $("#msg").html("Click the button to attack!");            
             }
         }
         $("#defenderDiv").append(this); // appends the selected defender to the div 
